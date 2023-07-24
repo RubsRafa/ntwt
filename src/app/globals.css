@@ -1,27 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* START: General styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.padding-x {
+  @apply sm:px-16 px-6;
 }
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+/* END: General styles */
+
+/* START: Title styles */
+.title {
+  @apply font-extrabold border-l-secondary-orange
+}
+.text {
+  @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-300 text-4xl text-center
+}
+.itens {
+  @apply flex border-l-orange-900 items-center justify-evenly font-sans text-lg mt-1
+}
+.globo{
+  @apply text-blue-800 font-extrabold
+}
+.g1{
+  @apply text-red-600 font-extrabold
+}
+.valor{
+  @apply text-green-800 font-extrabold
+}
+.ge{
+  @apply text-green-400 font-extrabold
+}
+.cartola{
+  @apply text-orange-400 font-extrabold
+}
+.globoplay{
+  @apply text-red-500 font-extrabold
+}
+.dropz{
+  @apply text-pink-400 font-extrabold
+}
+.gshow{
+  @apply text-orange-400 font-extrabold
+}
+.quem{
+  @apply text-neutral-800 font-extrabold
+}
+.receitas{
+  @apply text-pink-800 font-extrabold
+}
+/* END: Title styles */
